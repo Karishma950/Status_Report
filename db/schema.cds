@@ -1,3 +1,5 @@
+namespace Status_Report;
+
 using {
     sap.common.CodeList,
     cuid,
@@ -76,3 +78,4 @@ entity developerDetails : cuid {
     skills            : Association to many skills
                             on skills.developerDetail = $self;
 }
+
