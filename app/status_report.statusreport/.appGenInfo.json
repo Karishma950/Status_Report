@@ -1,0 +1,30 @@
+{
+  "generationParameters": {
+    "generationDate": "Sun Jun 08 2025 11:51:23 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "Local Cap",
+    "metadataFilename": "",
+    "serviceUrl": "http://localhost:4004/service/Status_ReportService/",
+    "appName": "status_report.statusreport",
+    "appTitle": "Status Report",
+    "appDescription": "Status Report Main UI",
+    "appNamespace": "",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.120.13",
+    "showMockDataInfo": false,
+    "generatorVersion": "1.18.0",
+    "template": "List Report Page V4",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "Teams"
+      },
+      {
+        "type": "Navigation Entity",
+        "value": "useCaseDetails"
+      }
+    ],
+    "launchText": "In order to launch the generated app, simply start your CAP project and navigate to the following location in your browser:\n\nhttp://localhost:4004/status_report.statusreport/webapp/index.html"
+  }
+}
