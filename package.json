@@ -27,7 +27,8 @@
     "start-local": "npm run generate-entry-point && npm run cds-watch",
     "generate-entry-point": "dev-cap-tools gen-entrypoint",
     "cds-watch": "cds watch --open",
-    "watch-Status_Report_Admin.statusreport": "cds watch --open Status_Report_Admin.statusreport/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-Status_Report_Admin.statusreport": "cds watch --open Status_Report_Admin.statusreport/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-status_report.statusreportdeveloper": "cds watch --open status_report.statusreportdeveloper/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "sql": {
@@ -50,6 +51,7 @@
   },
   "lcap": true,
   "sapux": [
-    "app/Status_Report_Admin.statusreport"
+    "app/Status_Report_Admin.statusreport",
+    "app/status_report.statusreportdeveloper"
   ]
 }

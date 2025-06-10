@@ -1,0 +1,177 @@
+{
+  "_version": "1.60.0",
+  "sap.app": {
+    "id": "statusreport.statusreportdeveloper",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:lrop",
+      "version": "1.18.0",
+      "toolsId": "bc01485d-1371-4433-8de1-b630bc208048"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/service/Status_Report_Developer/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "statusreportstatusreportdevelo-display": {
+          "semanticObject": "statusreportstatusreportdevelo",
+          "action": "display",
+          "title": "{{statusreportstatusreportdevelo-display.flpTitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.120.13",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.fe.templates": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "statusreport.statusreportdeveloper.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      },
+      "@i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      }
+    },
+    "resources": {
+      "css": []
+    },
+    "routing": {
+      "config": {},
+      "routes": [
+        {
+          "pattern": ":?query:",
+          "name": "useCaseDetailsList",
+          "target": "useCaseDetailsList"
+        },
+        {
+          "pattern": "useCaseDetails({key}):?query:",
+          "name": "useCaseDetailsObjectPage",
+          "target": "useCaseDetailsObjectPage"
+        },
+        {
+          "pattern": "useCaseDetails({key})/weeklyStatuses({key2}):?query:",
+          "name": "weeklyStatusObjectPage",
+          "target": "weeklyStatusObjectPage"
+        }
+      ],
+      "targets": {
+        "useCaseDetailsList": {
+          "type": "Component",
+          "id": "useCaseDetailsList",
+          "name": "sap.fe.templates.ListReport",
+          "options": {
+            "settings": {
+              "contextPath": "/useCaseDetails",
+              "variantManagement": "Page",
+              "navigation": {
+                "useCaseDetails": {
+                  "detail": {
+                    "route": "useCaseDetailsObjectPage"
+                  }
+                }
+              },
+              "controlConfiguration": {
+                "@com.sap.vocabularies.UI.v1.LineItem": {
+                  "tableSettings": {
+                    "type": "ResponsiveTable"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "useCaseDetailsObjectPage": {
+          "type": "Component",
+          "id": "useCaseDetailsObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "editableHeaderContent": false,
+              "contextPath": "/useCaseDetails",
+              "navigation": {
+                "weeklyStatuses": {
+                  "detail": {
+                    "route": "weeklyStatusObjectPage"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "weeklyStatusObjectPage": {
+          "type": "Component",
+          "id": "weeklyStatusObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "editableHeaderContent": false,
+              "contextPath": "/useCaseDetails/weeklyStatuses"
+            }
+          }
+        }
+      }
+    }
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "transactional"
+  }
+}
