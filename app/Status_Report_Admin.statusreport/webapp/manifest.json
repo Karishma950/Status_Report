@@ -132,9 +132,21 @@
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
                     "type": "ResponsiveTable"
+                  },
+                  "columns": {
+                    "DataField::teamName": {
+                      "width": "33%"
+                    },
+                    "DataField::poName": {
+                      "width": "34%"
+                    },
+                    "DataField::smName": {
+                      "width": "33%"
+                    }
                   }
                 }
-              }
+              },
+              "initialLoad": "Enabled"
             }
           }
         },
@@ -152,6 +164,49 @@
                     "route": "useCaseDetailsObjectPage"
                   }
                 }
+              },
+              "controlConfiguration": {
+                "developerDetails/@com.sap.vocabularies.UI.v1.LineItem#TeamMembers": {
+                  "columns": {
+                    "DataField::firstName": {
+                      "width": "33%"
+                    },
+                    "DataField::lastName": {
+                      "width": "34%"
+                    },
+                    "DataField::mailID": {
+                      "width": "33%"
+                    }
+                  }
+                },
+                "useCaseDetails/@com.sap.vocabularies.UI.v1.LineItem#UsecaseDetails": {
+                  "columns": {
+                    "DataField::usecaseID": {
+                      "width": "10%"
+                    },
+                    "DataField::usecaseName": {
+                      "width": "20%"
+                    },
+                    "DataField::boardArea": {
+                      "width": "10%"
+                    },
+                    "DataField::startQuarter": {
+                      "width": "10%"
+                    },
+                    "DataField::expectedGoLive": {
+                      "width": "10%"
+                    },
+                    "DataField::goLiveQuarter": {
+                      "width": "10%"
+                    },
+                    "DataField::numberofDeveloper": {
+                      "width": "15%"
+                    },
+                    "DataField::botStatusCodeList_Code": {
+                      "width": "15%"
+                    }
+                  }
+                }
               }
             }
           }
@@ -163,7 +218,22 @@
           "options": {
             "settings": {
               "editableHeaderContent": false,
-              "contextPath": "/Teams/useCaseDetails"
+              "contextPath": "/Teams/useCaseDetails",
+              "controlConfiguration": {
+                "weeklyStatuses/@com.sap.vocabularies.UI.v1.LineItem#WeeklyStatus": {
+                  "columns": {
+                    "DataField::status": {
+                      "width": "33%"
+                    },
+                    "DataField::modifiedBy": {
+                      "width": "34%"
+                    },
+                    "DataField::modifiedAt": {
+                      "width": "33%"
+                    }
+                  }
+                }
+              }
             }
           }
         }

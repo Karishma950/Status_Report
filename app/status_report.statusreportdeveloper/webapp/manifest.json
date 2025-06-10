@@ -105,11 +105,6 @@
           "pattern": "useCaseDetails({key}):?query:",
           "name": "useCaseDetailsObjectPage",
           "target": "useCaseDetailsObjectPage"
-        },
-        {
-          "pattern": "useCaseDetails({key})/weeklyStatuses({key2}):?query:",
-          "name": "weeklyStatusObjectPage",
-          "target": "weeklyStatusObjectPage"
         }
       ],
       "targets": {
@@ -132,9 +127,30 @@
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
                     "type": "ResponsiveTable"
+                  },
+                  "columns": {
+                    "DataField::usecaseID": {
+                      "width": "10%"
+                    },
+                    "DataField::usecaseName": {
+                      "width": "20%"
+                    },
+                    "DataField::goLiveQuarter": {
+                      "width": "10%"
+                    },
+                    "DataField::boardArea": {
+                      "width": "10%"
+                    },
+                    "DataField::botStatusCodeList_Code": {
+                      "width": "15%"
+                    },
+                    "DataField::numberofDeveloper": {
+                      "width": "15%"
+                    }
                   }
                 }
-              }
+              },
+              "initialLoad": "Enabled"
             }
           }
         },
@@ -146,24 +162,22 @@
             "settings": {
               "editableHeaderContent": false,
               "contextPath": "/useCaseDetails",
-              "navigation": {
-                "weeklyStatuses": {
-                  "detail": {
-                    "route": "weeklyStatusObjectPage"
+              "navigation": {},
+              "controlConfiguration": {
+                "weeklyStatuses/@com.sap.vocabularies.UI.v1.LineItem#WeeklyStatus": {
+                  "columns": {
+                    "DataField::status": {
+                      "width": "33%"
+                    },
+                    "DataField::modifiedBy": {
+                      "width": "34%"
+                    },
+                    "DataField::modifiedAt": {
+                      "width": "34%"
+                    }
                   }
                 }
               }
-            }
-          }
-        },
-        "weeklyStatusObjectPage": {
-          "type": "Component",
-          "id": "weeklyStatusObjectPage",
-          "name": "sap.fe.templates.ObjectPage",
-          "options": {
-            "settings": {
-              "editableHeaderContent": false,
-              "contextPath": "/useCaseDetails/weeklyStatuses"
             }
           }
         }
