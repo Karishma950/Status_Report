@@ -1,4 +1,4 @@
-namespace Status_Report;
+namespace Status_Report_Admin;
 
 using
 {
@@ -30,7 +30,7 @@ entity useCaseDetails
     team : Association to one Teams;
     developerDetails : Association to many developerDetails on developerDetails.useCaseDetail = $self;
     weeklyStatuses : Composition of many weeklyStatus on weeklyStatuses.useCaseDetail = $self;
-    botStatusCodeList : Association to one botStatus;
+    botStatusCodeList : Association to one useCaseStatus;
 }
 
 entity weeklyStatus : cuid, managed
@@ -56,10 +56,10 @@ entity skills : cuid, managed
     developerDetail : Association to one developerDetails;
 }
 
-entity botStatus : CodeList
+entity useCaseStatus : CodeList
 {
-    key code : botStatusEnum;
     criticality : Integer;
+    key Code : useCaseStatusEnum;
 }
 
 entity developerDetails : cuid
@@ -73,12 +73,12 @@ entity developerDetails : cuid
     skills : Association to many skills on skills.developerDetail = $self;
 }
 
-type botStatusEnum : Integer enum
+type useCaseStatusEnum : String enum
 {
-    Kickoff = 1;
-    Design = 2;
-    Development = 3;
-    UAT = 4;
-    GoLive = 5;
-    OnHold = 6;
+    Kickoff = 'Kick-off';
+    Design;
+    Development;
+    UAT;
+    GoLive = 'Go Live';
+    OnHold = 'On Hold';
 }

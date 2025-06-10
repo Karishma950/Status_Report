@@ -40,7 +40,7 @@
       }
     },
     {
-      "label": "PreLaunchTask for Run Status_Report",
+      "label": "PreLaunchTask for Run Status_Report_Admin",
       "type": "process",
       "command": "npx",
       "args": [
@@ -56,12 +56,12 @@
     },
     {
       "type": "dpt.ptdeploy",
-      "label": "Deploy Status_Report",
+      "label": "Deploy Status_Report_Admin",
       "taskType": "Deploy"
     },
     {
       "type": "dpt.ptdeploy",
-      "label": "Enable Discovery and Deploy Status_Report",
+      "label": "Enable Discovery and Deploy Status_Report_Admin",
       "taskType": "Deploy",
       "enableDiscovery": "true"
     }

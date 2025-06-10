@@ -1,7 +1,7 @@
 {
-  "name": "status_report.statusreport",
+  "name": "status_report.statusreportdeveloper",
   "version": "0.0.1",
-  "description": "Status Report Main UI",
+  "description": "View for Developer",
   "keywords": [
     "ui5",
     "openui5",

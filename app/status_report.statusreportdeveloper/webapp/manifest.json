@@ -1,7 +1,7 @@
 {
   "_version": "1.60.0",
   "sap.app": {
-    "id": "statusreport.statusreport",
+    "id": "statusreport.statusreportdeveloper",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -13,11 +13,11 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
       "version": "1.18.0",
-      "toolsId": "dd134969-3fa5-40f8-9e39-6e5bf535ef69"
+      "toolsId": "bc01485d-1371-4433-8de1-b630bc208048"
     },
     "dataSources": {
       "mainService": {
-        "uri": "/service/Status_ReportService/",
+        "uri": "/service/Status_Report_Developer/",
         "type": "OData",
         "settings": {
           "annotations": [],
@@ -27,10 +27,10 @@
     },
     "crossNavigation": {
       "inbounds": {
-        "statusreportstatusreport-display": {
-          "semanticObject": "statusreportstatusreport",
+        "statusreportstatusreportdevelo-display": {
+          "semanticObject": "statusreportstatusreportdevelo",
           "action": "display",
-          "title": "{{statusreportstatusreport-display.flpTitle}}",
+          "title": "{{statusreportstatusreportdevelo-display.flpTitle}}",
           "signature": {
             "parameters": {},
             "additionalParameters": "allowed"
@@ -73,7 +73,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "statusreport.statusreport.i18n.i18n"
+          "bundleName": "statusreport.statusreportdeveloper.i18n.i18n"
         }
       },
       "": {
@@ -98,33 +98,28 @@
       "routes": [
         {
           "pattern": ":?query:",
-          "name": "TeamsList",
-          "target": "TeamsList"
+          "name": "useCaseDetailsList",
+          "target": "useCaseDetailsList"
         },
         {
-          "pattern": "Teams({key}):?query:",
-          "name": "TeamsObjectPage",
-          "target": "TeamsObjectPage"
-        },
-        {
-          "pattern": "Teams({key})/useCaseDetails({key2}):?query:",
+          "pattern": "useCaseDetails({key}):?query:",
           "name": "useCaseDetailsObjectPage",
           "target": "useCaseDetailsObjectPage"
         }
       ],
       "targets": {
-        "TeamsList": {
+        "useCaseDetailsList": {
           "type": "Component",
-          "id": "TeamsList",
+          "id": "useCaseDetailsList",
           "name": "sap.fe.templates.ListReport",
           "options": {
             "settings": {
-              "contextPath": "/Teams",
+              "contextPath": "/useCaseDetails",
               "variantManagement": "Page",
               "navigation": {
-                "Teams": {
+                "useCaseDetails": {
                   "detail": {
-                    "route": "TeamsObjectPage"
+                    "route": "useCaseDetailsObjectPage"
                   }
                 }
               },
@@ -132,27 +127,30 @@
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
                     "type": "ResponsiveTable"
+                  },
+                  "columns": {
+                    "DataField::usecaseID": {
+                      "width": "10%"
+                    },
+                    "DataField::usecaseName": {
+                      "width": "20%"
+                    },
+                    "DataField::goLiveQuarter": {
+                      "width": "10%"
+                    },
+                    "DataField::boardArea": {
+                      "width": "10%"
+                    },
+                    "DataField::botStatusCodeList_Code": {
+                      "width": "15%"
+                    },
+                    "DataField::numberofDeveloper": {
+                      "width": "15%"
+                    }
                   }
                 }
-              }
-            }
-          }
-        },
-        "TeamsObjectPage": {
-          "type": "Component",
-          "id": "TeamsObjectPage",
-          "name": "sap.fe.templates.ObjectPage",
-          "options": {
-            "settings": {
-              "editableHeaderContent": false,
-              "contextPath": "/Teams",
-              "navigation": {
-                "useCaseDetails": {
-                  "detail": {
-                    "route": "useCaseDetailsObjectPage"
-                  }
-                }
-              }
+              },
+              "initialLoad": "Enabled"
             }
           }
         },
@@ -163,7 +161,23 @@
           "options": {
             "settings": {
               "editableHeaderContent": false,
-              "contextPath": "/Teams/useCaseDetails"
+              "contextPath": "/useCaseDetails",
+              "navigation": {},
+              "controlConfiguration": {
+                "weeklyStatuses/@com.sap.vocabularies.UI.v1.LineItem#WeeklyStatus": {
+                  "columns": {
+                    "DataField::status": {
+                      "width": "33%"
+                    },
+                    "DataField::modifiedBy": {
+                      "width": "34%"
+                    },
+                    "DataField::modifiedAt": {
+                      "width": "34%"
+                    }
+                  }
+                }
+              }
             }
           }
         }

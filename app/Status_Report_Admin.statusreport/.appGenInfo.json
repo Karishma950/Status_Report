@@ -4,8 +4,8 @@
     "generatorPlatform": "SAP Business Application Studio",
     "serviceType": "Local Cap",
     "metadataFilename": "",
-    "serviceUrl": "http://localhost:4004/service/Status_ReportService/",
-    "appName": "status_report.statusreport",
+    "serviceUrl": "http://localhost:4004/service/Status_Report_AdminService/",
+    "appName": "Status_Report_Admin.statusreport",
     "appTitle": "Status Report",
     "appDescription": "Status Report Main UI",
     "appNamespace": "",
@@ -25,6 +25,6 @@
         "value": "useCaseDetails"
       }
     ],
-    "launchText": "In order to launch the generated app, simply start your CAP project and navigate to the following location in your browser:\n\nhttp://localhost:4004/status_report.statusreport/webapp/index.html"
+    "launchText": "In order to launch the generated app, simply start your CAP project and navigate to the following location in your browser:\n\nhttp://localhost:4004/Status_Report_Admin.statusreport/webapp/index.html"
   }
 }

@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run Status_Report",
+      "name": "Run Status_Report_Admin",
       "runtimeExecutable": "cds",
       "killBehavior": "polite",
       "request": "launch",
@@ -14,10 +14,10 @@
       "internalConsoleOptions": "openOnSessionStart",
       "type": "pwa-node",
       "cwd": "${workspaceFolder}",
-      "preLaunchTask": "PreLaunchTask for Run Status_Report",
+      "preLaunchTask": "PreLaunchTask for Run Status_Report_Admin",
       "envFile": "${workspaceFolder}/env/.env1",
       "env": {
-        "run.config": "{\"handlerId\":\"lcap_run_config_handler_id\",\"runnableId\":\"{\\\"projectPath\\\":\\\"/home/user/projects/Status_Report\\\",\\\"profileName\\\":\\\"\\\"}\"}"
+        "run.config": "{\"handlerId\":\"lcap_run_config_handler_id\",\"runnableId\":\"{\\\"projectPath\\\":\\\"/home/user/projects/Status_Report_Admin\\\",\\\"profileName\\\":\\\"\\\"}\"}"
       }
     }
   ]
