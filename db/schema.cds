@@ -1,4 +1,4 @@
-namespace Status_Report;
+namespace Status_Report_Admin;
 
 using
 {

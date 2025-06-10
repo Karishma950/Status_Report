@@ -1,7 +1,7 @@
-using { Status_Report as my } from '../db/schema.cds';
+using { Status_Report_Admin as my } from '../db/schema.cds';
 
-@path : '/service/Status_ReportService'
-service Status_ReportService
+@path : '/service/Status_Report_AdminService'
+service Status_Report_AdminService
 {
     @odata.draft.enabled
     entity Teams as
@@ -16,7 +16,7 @@ service Status_ReportService
         projection on my.skills;
 }
 
-annotate Status_ReportService with @requires :
+annotate Status_Report_AdminService with @requires :
 [
     'authenticated-user'
 ];

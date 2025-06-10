@@ -1,4 +1,4 @@
-using Status_ReportService as service from '../../srv/service';
+using Status_Report_AdminService as service from '../../srv/service';
 annotate service.Teams with @(
     UI.FieldGroup #GeneratedGroup : {
         $Type : 'UI.FieldGroupType',

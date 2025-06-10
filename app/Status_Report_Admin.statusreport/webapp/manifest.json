@@ -17,7 +17,7 @@
     },
     "dataSources": {
       "mainService": {
-        "uri": "/service/Status_ReportService/",
+        "uri": "/service/Status_Report_AdminService/",
         "type": "OData",
         "settings": {
           "annotations": [],

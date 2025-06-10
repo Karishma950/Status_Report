@@ -1,2 +1,2 @@
 
-using from './status_report.statusreport/annotations';
+using from './Status_Report_Admin.statusreport/annotations';

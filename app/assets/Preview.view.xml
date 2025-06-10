@@ -16,7 +16,7 @@
     <l:BlockLayout>
         <l:BlockLayoutRow>
             <l:BlockLayoutCell
-                title="Status_Report"
+                title="Status_Report_Admin"
                 titleAlignment="Left"
                 class="customCellImageBackground">
                 <VBox>
