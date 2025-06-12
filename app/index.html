@@ -27,7 +27,7 @@
                     return Controller.extend("PreviewController", {
                         onInit: function () {
 
-                            const data = {"Services":[{"ServiceName":"Status_ReportService","DetailsURL":"./service/Status_ReportService/","Metadata":"./service/Status_ReportService/$metadata","Entities":[{"Name":"Teams","URL":"./service/Status_ReportService/Teams","FioriURL":"$fiori-preview/Status_ReportService/Teams#preview-app"},{"Name":"firmContribution","URL":"./service/Status_ReportService/firmContribution","FioriURL":"$fiori-preview/Status_ReportService/firmContribution#preview-app"},{"Name":"skills","URL":"./service/Status_ReportService/skills","FioriURL":"$fiori-preview/Status_ReportService/skills#preview-app"}],"EntitiesCount":3}]}
+                            const data = {"Services":[{"ServiceName":"Status_ReportService","DetailsURL":"./service/Status_ReportService/","Metadata":"./service/Status_ReportService/$metadata","Entities":[{"Name":"Teams","URL":"./service/Status_ReportService/Teams","FioriURL":"$fiori-preview/Status_ReportService/Teams#preview-app"},{"Name":"firmContribution","URL":"./service/Status_ReportService/firmContribution","FioriURL":"$fiori-preview/Status_ReportService/firmContribution#preview-app"},{"Name":"developerDetails","URL":"./service/Status_ReportService/developerDetails","FioriURL":"$fiori-preview/Status_ReportService/developerDetails#preview-app"}],"EntitiesCount":3}]}
                             this.getView().setModel(new JSONModel(data));
                         }
                     });

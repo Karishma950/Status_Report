@@ -11,9 +11,8 @@ service Status_ReportService
     entity firmContribution as
         projection on my.firmContribution;
 
-    @odata.draft.enabled
-    entity skills as
-        projection on my.skills;
+    entity developerDetails as
+        projection on my.developerDetails;
 }
 
 annotate Status_ReportService with @requires :
