@@ -46,14 +46,8 @@ entity firmContribution : cuid, managed
     description : String(100);
     noOfHours : String(100);
     developerDetail : Association to one developerDetails;
-}
-
-entity skills : cuid, managed
-{
-    skillName : String(100);
-    proficiencyLevel : String(100);
-    attachment : String(100);
-    developerDetail : Association to one developerDetails;
+    skills : String(100);
+    proficiency : String(100);
 }
 
 entity useCaseStatus : CodeList
@@ -70,7 +64,6 @@ entity developerDetails : cuid
     team : Association to one Teams;
     useCaseDetail : Association to one useCaseDetails;
     firmContributions : Association to many firmContribution on firmContributions.developerDetail = $self;
-    skills : Association to many skills on skills.developerDetail = $self;
 }
 
 type useCaseStatusEnum : String enum

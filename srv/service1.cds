@@ -6,6 +6,10 @@ service Status_Report_Developer
     @odata.draft.enabled
     entity useCaseDetails as
         projection on my.useCaseDetails;
+
+    @odata.draft.enabled
+    entity firmContribution as
+        projection on my.firmContribution;
 }
 
 annotate Status_Report_Developer with @requires :

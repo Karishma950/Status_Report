@@ -39,12 +39,6 @@ annotate service.Teams with @(
             ID : 'UsecaseDetails',
             Target : 'useCaseDetails/@UI.LineItem#UsecaseDetails',
         },
-        {
-            $Type : 'UI.ReferenceFacet',
-            Label : 'Devloper details',
-            ID : 'Devloperdetails',
-            Target : '@UI.FieldGroup#Devloperdetails',
-        },
     ],
     UI.LineItem : [
         {
