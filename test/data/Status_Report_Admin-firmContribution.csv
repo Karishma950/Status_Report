@@ -1,3 +1,5 @@
-ID;createdAt;createdBy;modifiedAt;modifiedBy;activityName;description;noOfHours;developerDetail_ID
-2f95b735-2744-4426-a6b8-a8911689c52d;2025-06-10T22:14:37+0530;createdBy8769;2025-06-10T22:14:37+0530;modifiedBy3311;activityName1794;description8447;noOfHours3769;687d487a-5fa8-47e2-be90-3e2bff0bc6fc
-90025c98-8e8c-4f55-a047-d29c25a019ae;2025-06-10T22:14:37+0530;createdBy4467;2025-06-10T22:14:37+0530;modifiedBy4422;activityName5010;description5281;noOfHours1897;bae2b3f7-c523-4f19-895f-9bf8d36c2a96
+ID;createdAt;createdBy;modifiedAt;modifiedBy;activityName;description;noOfHours;developerDetail_ID;skills;proficiency
+2f95b735-2744-4426-a6b8-a8911689c52d;2025-06-10T22:14:37+0530;createdBy8769;2025-06-10T22:14:37+0530;modifiedBy3311;activityName1794;description8447;noOfHours3769;687d487a-5fa8-47e2-be90-3e2bff0bc6fc;fmsmfb;2
+90025c98-8e8c-4f55-a047-d29c25a019ae;2025-06-10T22:14:37+0530;createdBy4467;2025-06-10T22:14:37+0530;modifiedBy4422;activityName5010;description5281;noOfHours1897;bae2b3f7-c523-4f19-895f-9bf8d36c2a96;sfsrdhrh;basic
+6b634395-8b30-4a69-af60-473089513893;2025-06-17T10:37:42+0530;createdBy8679;2025-06-17T10:37:42+0530;modifiedBy2066;activityName2156;description3537;noOfHours387;687d487a-5fa8-47e2-be90-3e2bff0bc6fc;skills4043;proficiency4533
+9f552c51-57f9-46b2-8157-4847ea8c17f9;2025-06-17T10:37:42+0530;createdBy3206;2025-06-17T10:37:42+0530;modifiedBy9559;activityName1294;description4828;noOfHours3547;e213ed0c-8466-4c96-aecf-67d3633d2732;skills3892;proficiency4283

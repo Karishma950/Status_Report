@@ -39,12 +39,6 @@ annotate service.Teams with @(
             ID : 'UsecaseDetails',
             Target : 'useCaseDetails/@UI.LineItem#UsecaseDetails',
         },
-        {
-            $Type : 'UI.ReferenceFacet',
-            Label : 'Devloper details',
-            ID : 'Devloperdetails',
-            Target : '@UI.FieldGroup#Devloperdetails',
-        },
     ],
     UI.LineItem : [
         {
@@ -93,6 +87,21 @@ annotate service.Teams with @(
                 $Type : 'UI.DataField',
                 Value : teamName,
                 Label : 'teamName',
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : developerDetails.firmContributions.activityName,
+                Label : 'activityName',
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : developerDetails.firmContributions.description,
+                Label : 'description',
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : developerDetails.firmContributions.noOfHours,
+                Label : 'noOfHours',
             },
         ],
     },

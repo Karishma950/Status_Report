@@ -11,9 +11,7 @@ service Status_Report_AdminService
     entity firmContribution as
         projection on my.firmContribution;
 
-    @odata.draft.enabled
-    entity skills as
-        projection on my.skills;
+
 }
 
 annotate Status_Report_AdminService with @requires :

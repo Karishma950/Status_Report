@@ -60,6 +60,12 @@ annotate service.useCaseDetails with @(
             ID : 'WeeklyStatus',
             Target : 'weeklyStatuses/@UI.LineItem#WeeklyStatus',
         },
+        {
+            $Type : 'UI.ReferenceFacet',
+            Label : 'Details',
+            ID : 'Details',
+            Target : 'developerDetails/@UI.LineItem#Details',
+        },
     ],
     UI.LineItem : [
         {
@@ -127,6 +133,46 @@ annotate service.weeklyStatus with @(
         {
             $Type : 'UI.DataField',
             Value : modifiedAt,
+        },
+    ]
+);
+
+annotate service.developerDetails with @(
+    UI.LineItem #Details : [
+        {
+            $Type : 'UI.DataField',
+            Value : firstName,
+            Label : 'firstName',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : lastName,
+            Label : 'lastName',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : ID,
+            Label : 'ID',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : firmContributions.activityName,
+            Label : 'activityName',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : firmContributions.noOfHours,
+            Label : 'noOfHours',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : firmContributions.skills,
+            Label : 'skills',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : firmContributions.proficiency,
+            Label : 'proficiency',
         },
     ]
 );
