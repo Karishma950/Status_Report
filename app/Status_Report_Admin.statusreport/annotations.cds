@@ -94,6 +94,21 @@ annotate service.Teams with @(
                 Value : teamName,
                 Label : 'teamName',
             },
+            {
+                $Type : 'UI.DataField',
+                Value : developerDetails.firmContributions.activityName,
+                Label : 'activityName',
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : developerDetails.firmContributions.description,
+                Label : 'description',
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : developerDetails.firmContributions.noOfHours,
+                Label : 'noOfHours',
+            },
         ],
     },
 );
