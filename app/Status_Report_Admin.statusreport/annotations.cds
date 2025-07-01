@@ -167,7 +167,8 @@ annotate service.useCaseDetails with @(
         {
             $Type : 'UI.DataField',
             Value : botStatusCodeList_Code,
-            Label : 'Status',
+            Label : '{i18n>Status}',
+            Criticality : botStatusCodeList.criticality,
         },
     ],
     UI.HeaderInfo : {
@@ -234,6 +235,7 @@ annotate service.useCaseDetails with @(
                 $Type : 'UI.DataField',
                 Value : botStatusCodeList_Code,
                 Label : 'Status',
+                Criticality : botStatusCodeList.criticality,
             },
         ],
     },
