@@ -27,7 +27,7 @@
                     return Controller.extend("PreviewController", {
                         onInit: function () {
 
-                            const data = {"Services":[{"ServiceName":"Status_Report_AdminService","DetailsURL":"./service/Status_Report_AdminService/","Metadata":"./service/Status_Report_AdminService/$metadata","Entities":[{"Name":"Teams","URL":"./service/Status_Report_AdminService/Teams","FioriURL":"$fiori-preview/Status_Report_AdminService/Teams#preview-app"},{"Name":"firmContribution","URL":"./service/Status_Report_AdminService/firmContribution","FioriURL":"$fiori-preview/Status_Report_AdminService/firmContribution#preview-app"}],"EntitiesCount":2},{"ServiceName":"Status_Report_Developer","DetailsURL":"./service/Status_Report_Developer/","Metadata":"./service/Status_Report_Developer/$metadata","Entities":[{"Name":"useCaseDetails","URL":"./service/Status_Report_Developer/useCaseDetails","FioriURL":"$fiori-preview/Status_Report_Developer/useCaseDetails#preview-app"},{"Name":"firmContribution","URL":"./service/Status_Report_Developer/firmContribution","FioriURL":"$fiori-preview/Status_Report_Developer/firmContribution#preview-app"}],"EntitiesCount":2}]}
+
                             this.getView().setModel(new JSONModel(data));
                         }
                     });
