@@ -1,7 +1,7 @@
 name;descr;criticality;Code
-Design;Design;5913;Design
-Development;Development;9504;Development
-UAT;UAT;8309;UAT
-Go Live;Go Live;52;Go Live
-On Hold;On Hold;4929;On Hold
-Kick off;Kick off;5270;Kick-off
+Design;Design;2;Design
+Development;Development;5;Development
+UAT;UAT;4;UAT
+Go Live;Go Live;3;Go Live
+On Hold;On Hold;1;On Hold
+Kick off;Kick off;6;Kick-off

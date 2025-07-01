@@ -177,6 +177,9 @@
                     "DataField::mailID": {
                       "width": "33%"
                     }
+                  },
+                  "tableSettings": {
+                    "type": "ResponsiveTable"
                   }
                 },
                 "useCaseDetails/@com.sap.vocabularies.UI.v1.LineItem#UsecaseDetails": {
@@ -205,6 +208,9 @@
                     "DataField::botStatusCodeList_Code": {
                       "width": "15%"
                     }
+                  },
+                  "tableSettings": {
+                    "type": "ResponsiveTable"
                   }
                 }
               }
